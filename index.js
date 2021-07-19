@@ -5,13 +5,14 @@ const main = document.querySelector(".main-base");
 const Spherical = document.querySelector(".spherical-animation");
 
 container.addEventListener("mousemove", (e) => {
-  let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-  let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+  let xAxis = (window.innerWidth / 2 - e.pageX) / 16;
+  let yAxis = (window.innerHeight / 2 - e.pageY) / 16;
   main.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
   spherical.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
 
   container.addEventListener("mouseout", (e) => {
     main.style.transform = `rotateY(-${xAxis}deg) rotateX(-${yAxis}deg)`;
+    spherical.style.transform = `rotateY(-${xAxis}deg) rotateX(-${yAxis}deg)`;
   });
 });
 
