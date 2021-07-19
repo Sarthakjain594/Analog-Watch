@@ -1,16 +1,17 @@
 // Spherical animation analog-clock
 
-const container = document.querySelector(".container");
+const numberdial = document.querySelector(".number-dial");
 const main = document.querySelector(".main-base");
 const Spherical = document.querySelector(".spherical-animation");
 
-container.addEventListener("mousemove", (e) => {
+numberdial.addEventListener("mousemove", (e) => {
   let xAxis = (window.innerWidth / 2 - e.pageX) / 16;
   let yAxis = (window.innerHeight / 2 - e.pageY) / 16;
   main.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
   spherical.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  numberdial.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
 
-  container.addEventListener("mouseout", (e) => {
+  numberdial.addEventListener("mouseout", (e) => {
     main.style.transform = `rotateY(-${xAxis}deg) rotateX(-${yAxis}deg)`;
     spherical.style.transform = `rotateY(-${xAxis}deg) rotateX(-${yAxis}deg)`;
   });

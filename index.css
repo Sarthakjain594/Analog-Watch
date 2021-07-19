@@ -9,14 +9,17 @@
 }
 
 body {
-  background-color: rgb(0, 0, 0, 0.8);
+  /* background-color: rgb(0, 0, 0, 0.8); */
+  background-color: lightyellow;
+  /* background-color: #eea59f; */
+  font-family: "Poppins" , sans-serif;
 }
 
 div.conatainer {
   transform-style: preserve-3d;
 }
 
-div.border-animation {
+/* div.border-animation {
   position: absolute;
   left: 0;
   right: 0;
@@ -29,7 +32,7 @@ div.border-animation {
   border: 0.5rem solid grey;
   border-radius: 100%;
   box-shadow: 0px 0px 15px lightcyan;
-}
+} */
 
 div.spherical-animation {
   z-index: -1;
@@ -39,8 +42,8 @@ div.spherical-animation {
   bottom: 0;
   top: 0;
   margin: auto;
-  height: 31.5rem;
-  width: 31.5rem;
+  height: 29.5rem;
+  width: 29.5rem;
   border-radius: 100%;
   background-image: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
   animation: animate 1.5s linear infinite;
@@ -54,11 +57,12 @@ div.spherical-animation {
   }
 }
 
-div.main-base {
+div.number-dial {
+  z-index: 100;
   display: flex;
   justify-content: center;
-  height: 29.5rem;
-  width: 29.5rem;
+  height: 28.5rem;
+  width: 28.5rem;
   position: absolute;
   left: 0;
   right: 0;
@@ -66,12 +70,64 @@ div.main-base {
   top: 0;
   margin: auto;
   border-radius: 100%;
-  background-image: radial-gradient(
+  transform-style: preserve-3d;
+}
+
+span.no12 {
+  color: #fff;
+  font-size: 2.5rem;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  margin-top: 0.5rem;
+
+}
+
+
+ span.no3 {
+  color: #fff;
+  font-size: 2.5rem;
+  position: absolute;
+  bottom: 45%;
+  right: 0;
+  margin-right: 0.5rem;
+}
+
+ span.no6 {
+  color: #fff;
+  font-size: 2.5rem;
+  position: absolute;
+  bottom: 0;
+}
+
+ span.no9 {
+  color: #fff;
+  font-size: 2.5rem;
+  position: absolute;
+  bottom: 45%;
+  left: 0;
+  margin-left: 0.5rem;
+}
+
+div.main-base {
+  display: flex;
+  justify-content: center;
+  height: 28.5rem;
+  width: 28.5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  border-radius: 100%;
+  /* background-image: radial-gradient(
     circle at 100px 100px,
     #fff 0%,
     lightgoldenrodyellow 50%,
     lightcoral 100%
-  );
+  ); */
+  background-color: #111;
 
   transform-style: preserve-3d;
   box-shadow: 0px 0px 10px lightgoldenrodyellow;
@@ -117,7 +173,7 @@ div.main-base::before {
   height: 10rem;
   width: 0.3rem;
   bottom: 9.9rem;
-  background-color: #111;
+  background-color: #fff;
   z-index: 5;
 }
 
@@ -125,7 +181,7 @@ div.main-base::before {
   height: 11rem;
   width: 0.1rem;
   bottom: 10.9rem;
-  background-color: #111;
+  background-color: #fff;
   z-index: 4;
 }
 
@@ -136,13 +192,58 @@ div.main-base::before {
   }
 
   div.spherical-animation {
-    height: 21.5rem;
-    width: 21.5rem;
+    height: 20.5rem;
+    width: 20.5rem;
   }
 
   div.main-base {
     height: 19.5rem;
     width: 19.5rem;
+  }
+
+  div.number-dial {
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    height: 19.5rem;
+    width: 19.5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    border-radius: 100%;
+    transform-style: preserve-3d;
+  }
+  
+  span.no12 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-top: -0.5rem;
+  }
+
+   span.no3 {
+    color: #fff;
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 42%;
+    right: 0;
+    margin-right: 0.8rem;
+  }
+  
+   span.no6 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: -0.3rem;
+  }
+  
+   span.no9 {
+    color: #fff;
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 42%;
+    margin-left: 0.8rem;
   }
 
   .hour-hand {
@@ -160,6 +261,6 @@ div.main-base::before {
   .second-hand {
     height: 7.5rem;
     width: 0.1rem;
-    bottom:7.3rem ;
+    bottom: 7.3rem;
   }
 }
